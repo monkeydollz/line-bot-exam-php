@@ -31,7 +31,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "111920 GrandHome 1,990".'\n'."111912 Sabina 1,590";
+  $arrPostData['messages'][0]['text'] = "111920 GrandHome 1,990\n111912 Sabina 1,590";
 
  } 
 
