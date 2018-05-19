@@ -27,13 +27,14 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else{
+}else if($arrJson['events'][0]['message']['text'] == "รหัสสินค้า"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
-}
- 
+  $arrPostData['messages'][0]['text'] = "111920 GrandHome 1,990 <br>111912 Sabina 1,590";
+
+ } 
+
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
